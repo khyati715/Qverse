@@ -1,0 +1,94 @@
+/* ===== GALAXY BACKGROUND ===== */
+
+body {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(99,102,241,0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(34,211,238,0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(168,85,247,0.25),
+      transparent 40%
+    ),
+    #020617;
+  overflow-x: hidden;
+}
+
+/* Floating stars */
+.stars {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, #fff, transparent),
+    radial-gradient(1px 1px at 80% 40%, #fff, transparent),
+    radial-gradient(1px 1px at 50% 70%, #fff, transparent),
+    radial-gradient(1px 1px at 30% 90%, #fff, transparent);
+  animation: drift 60s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+/* ===== GLASS CARDS ===== */
+
+.card,
+.queue-card,
+.insight-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+
+/* Floating hover */
+.card:hover,
+.queue-card:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* ===== BUTTON GLOW ===== */
+
+.primary-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.primary-btn:hover::after {
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+}
+
+/* ===== TEXT GLOW ===== */
+
+.title {
+  text-shadow:
+    0 0 20px rgba(99,102,241,0.6),
+    0 0 40px rgba(34,211,238,0.4);
+}

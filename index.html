@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Qverse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="galaxy.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div id="app">
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+      <h1 class="title">Qverse</h1>
+      <p class="subtitle">Live campus flow, decoded.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Campus Status</h3>
+          <p class="green">Active</p>
+        </div>
+
+        <div class="card">
+          <h3>Active Queues</h3>
+          <p id="queueCount">3 Locations</p>
+        </div>
+
+        <div class="card">
+          <h3>Avg Wait Time</h3>
+          <p id="avgWait">12 min</p>
+        </div>
+      </div>
+
+      <button onclick="goTo('queues')" class="primary-btn">
+        View Live Queues →
+      </button>
+    </section>
+
+    <!-- LIVE QUEUES -->
+    <section id="queues" class="screen">
+      <h2>Live Queues</h2>
+      <div id="queueList" class="queue-list"></div>
+
+      <button onclick="goTo('home')" class="secondary-btn">
+        ← Back
+      </button>
+    </section>
+
+    <!-- AI INSIGHTS -->
+    <section id="insight" class="screen">
+      <h2>AI Insight</h2>
+      <p class="powered">Powered by Google Gemini</p>
+
+      <div class="insight-box" id="insightText"></div>
+
+      <button onclick="refreshInsight()" class="primary-btn">
+        Refresh Insight
+      </button>
+
+      <button onclick="goTo('queues')" class="secondary-btn">
+        ← Back to Queues
+      </button>
+    </section>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="ai.js"></script>
+  <script src="app.js"></script>
+  <script src="galaxy.js"></script>
+
+</body>
+</html>

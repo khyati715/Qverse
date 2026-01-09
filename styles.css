@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+#app {
+  padding: 24px;
+  max-width: 420px;
+  margin: auto;
+}
+
+.screen {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.green {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  border: none;
+  color: black;
+  font-weight: 600;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid #374151;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.queue-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.queue-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.powered {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.insight-box {
+  background: rgba(99,102,241,0.1);
+  border-left: 4px solid #6366f1;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+#galaxy {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#app {
+  position: relative;
+  z-index: 2;
+}
